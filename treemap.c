@@ -42,12 +42,11 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
   arbol->lower_than = lower_than;
   return arbol;
     //new->lower_than = lower_than;
-    //return NULL;
 }
 
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
-  
+
 }
 
 TreeNode * minimum(TreeNode * x){
