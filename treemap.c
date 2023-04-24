@@ -60,8 +60,6 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
       }
       
     }
-    tree->current->pair->key = key;
-    tree->current->pair->value = value;
   
 }
 
