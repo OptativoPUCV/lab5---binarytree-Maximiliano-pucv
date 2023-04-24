@@ -76,18 +76,14 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   if(tree->current == NULL) return NULL;
   while(tree->current != NULL)
     {
-      
-      if(tree->current->pair->key == key)
+      if(tree->current->pair->key == key) return tree->current->pair;
+      if(tree->current->pair->key > key)
       {
-        return tree->current->pair;
-      }
-      if (tree->current->pair->key > key)
-      {
-        tree->current = tree->current->right;
+        tree->current = tree->current->left;
       }
       else
       {
-        tree->current = tree->current->left;
+        tree->current = tree->current->right;
       }
     }
     return NULL;
