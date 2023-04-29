@@ -96,6 +96,7 @@ TreeNode * minimum(TreeNode * x){
 void removeNode(TreeMap * tree, TreeNode* node) {
   if(searchTreeMap(tree, node->pair->key) != NULL)
   {
+    //caso 1
     if(tree->current->left == NULL && tree->current->right == NULL)
     {
       if(node == node->parent->left)
@@ -103,6 +104,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         node->parent->left = NULL;
       }
     }
+    //caso 2
     if(tree->current->left == NULL || tree->current->right == NULL)
     {
       TreeNode *aux = tree->current;
