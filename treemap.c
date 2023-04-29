@@ -172,7 +172,7 @@ Pair * nextTreeMap(TreeMap * tree) {
   }
   else
   {
-    while(tree->current->parent != NULL)
+    while(tree->current->parent != NULL && tree->current->parent->right == tree->current)
     { 
       if(tree->lower_than(tree->current->pair->key,tree->current->parent->pair->key)== 1)
       {
