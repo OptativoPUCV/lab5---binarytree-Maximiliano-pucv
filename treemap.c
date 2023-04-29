@@ -180,7 +180,7 @@ Pair * nextTreeMap(TreeMap * tree) {
           tree->current = tree->current->parent;
           return tree->current->pair;
         }
-        else if (tree->lower_than(tree->current->->pair->key,tree->current->parent->pair->key)== 1)
+        else if (tree->lower_than(tree->current->pair->key,tree->current->parent->pair->key)== 1)
         {
           tree->current = tree->current->parent;
         }
