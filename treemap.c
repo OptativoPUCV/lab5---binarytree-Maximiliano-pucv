@@ -136,10 +136,10 @@ Pair * upperBound(TreeMap * tree, void* key) {
   TreeNode *aux = tree->root;
   
   if(tree->current->pair->key == key)return tree->current->pair;
-  while(tree->current != NULL)
+  /*while(tree->current != NULL)
     {
       if(tree->lower_than())
-    }
+    }*/
     return NULL;
 }
 
