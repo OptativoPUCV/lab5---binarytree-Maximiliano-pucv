@@ -163,10 +163,27 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
+  if (tree == NULL) return NULL;
+  
   if(tree->current->right != NULL)
   {
     tree->current = tree->current->right;
     return tree->current->pair;
+  }
+  else
+  {
+    while(tree->current->parent != NULL)
+      {
+        if(tree->current->parent == NULL) return NULL;
+        if(tree->lower_than(tree->current->pair->key,tree->current->parent->pair->key)== 1)
+        {
+          tree->current = tree->current->parent;
+          return tree->current->pair;
+        }
+        else{
+          return tree->current->pair;
+        }
+      }
   }
   if(tree->current == tree->root)
   {
