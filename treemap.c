@@ -137,6 +137,11 @@ Pair * upperBound(TreeMap * tree, void* key) {
   if(tree->current->pair->key == key)return tree->current->pair;
   aux=searchTreeMap(tree,key);
   if(aux != NULL) return aux;
+  if(tree->lower_than(aux->key,key)==1)
+  {
+    aux = tree->current->parent->pair;
+    return aux;
+  }
   
   return NULL;
 }
