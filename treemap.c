@@ -154,7 +154,14 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-  //if(tree->current->parent == NULL) return tree->current->pair;
+  if(tree->current->parent == NULL)
+  {
+    if(tree->current->right != NULL)
+    {
+      tree->current = tree->current->right;
+      return tree->current->pair;
+    }
+  }
   if(tree->lower_than(tree->current->pair->key,tree->current->parent->pair->key)== 1)
   {
     tree->current = tree->current->parent;
