@@ -132,12 +132,14 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
-  /*tree->current = tree->root;
+  tree->current = tree->root;
+  TreeNode *aux = tree->root;
+  
   if(tree->current->pair->key == key)return tree->current->pair;
-  while(true)
+  while(tree->current != NULL)
     {
-      if
-    }*/
+      if(tree->lower_than())
+    }
     return NULL;
 }
 

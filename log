@@ -217,3 +217,20 @@ Thu 27 Apr 2023 04:06:14 PM UTC:
  tests:  17|3
 total_score: 30/70
 2369b9a
+Sat 29 Apr 2023 08:30:06 PM UTC: 
+ treemap.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:141:10: error: too few arguments to function ‘tree->lower_than’
+  141 |       if(tree->lower_than())
+      |          ^~~~
+treemap.c:142:5: error: expected expression before ‘}’ token
+  142 |     }
+      |     ^
+treemap.c:136:13: error: unused variable ‘aux’ [-Werror=unused-variable]
+  136 |   TreeNode *aux = tree->root;
+      |             ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+6526aa1
