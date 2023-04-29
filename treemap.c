@@ -161,7 +161,7 @@ Pair * nextTreeMap(TreeMap * tree) {
   }
   if(tree->current == tree->root)
   {
-    return tree->current->left;
+    return tree->current->left->pair;
   }
     return NULL;
 }
